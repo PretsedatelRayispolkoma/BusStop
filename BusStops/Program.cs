@@ -24,8 +24,10 @@ namespace BusStops
                 switch (commandItems[0])
                 {
                     case "NEW_BUS":
-                        bus.AddBuss(commandItems);
                         break;
+                    case "BUSES_FOR_STOP":
+                        break;
+
                 }
 
             }
