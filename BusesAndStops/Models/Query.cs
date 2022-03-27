@@ -24,11 +24,11 @@ namespace BusesAndStops.Models
                     PrintList(busStop.BusesForStop(commandItems[1]));
                     break;
                 case "STOPS_FOR_BUS":
-                    StopBus stopBus = new StopBus();
+                    StopBus stopBus = new StopBus(bus, commandItems[1]);
                     PrintList(stopBus.StopsForBus(commandItems[1])); 
                     break;
                 case "ALL_BUSES":
-                    AllBuses allBuses = new AllBuses();
+                    AllBuses allBuses = new AllBuses(bus);
                     PrintList(allBuses.GetAllBuses(bus));
                     break;
                 default:

@@ -8,6 +8,11 @@ namespace BusesAndStops.Models
 {
     public class AllBuses : Bus
     {
+        public AllBuses(Bus bus)
+        {
+            this.busesDict = bus.busesDict;
+        }
+
         public List<string> GetAllBuses(Bus bus)
         {
             List<string> allRoutes = new List<string>();
@@ -16,7 +21,7 @@ namespace BusesAndStops.Models
 
             string stopsLine = "";
 
-            if (sortedRoutes.Count != 0)
+            if (sortedRoutes.Any())
             {
                 foreach (var route in sortedRoutes)
                 {
